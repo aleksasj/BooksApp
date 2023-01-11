@@ -18,7 +18,6 @@ namespace BooksApp.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Author>>> GetAuthor() =>  await _context.Author.Include(a => a.Books).ToListAsync<Author>();
         
-
         [HttpGet("{id}")]
         public async Task<ActionResult<Author>> GetAuthor(int id)
         {

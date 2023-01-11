@@ -26,7 +26,7 @@ namespace BooksApp.Models
     {
         public int Id { get; internal set; }
         public string? Title { get; set; }
-        public int AuthorId { get; set; }
+        public int AuthorId { internal get; set; }
         public  Author Author { get; }
 
     }
